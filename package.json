@@ -1,10 +1,10 @@
 {
   "main": "index.js",
   "directories": {
-    "blog": ""
+    "blog": "blog"
   },
   "scripts": {
-    "blog:build": "vuepress build"
+    "blog:build": "vuepress build blog"
   },
   "dependencies": {
     "moment": "^2.24.0",
