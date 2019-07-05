@@ -1,7 +1,7 @@
 {
   "main": "index.js",
   "directories": {
-    "blog": "blog"
+    "blog": ""
   },
   "scripts": {
     "blog:build": "vuepress build"
