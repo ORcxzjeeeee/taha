@@ -1,14 +1,22 @@
 {
   "main": "index.js",
   "directories": {
+    "main": "main",
     "blog": "blog"
   },
   "scripts": {
-    "blog:build": "vuepress build blog"
+    "blog:build": "vuepress build"
   },
   "dependencies": {
+    "css-prefers-color-scheme": "^4.0.0",
+    "eslint": "^6.0.1",
     "moment": "^2.24.0",
     "vuepress": "^1.0.2",
     "yaml-front-matter": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-blog": "^1.2.4",
+    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
+    "@vuepress/theme-blog": "^1.2.2"
   }
 }
