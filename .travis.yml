@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+        - "10"
+env:
+        - CXX=g++-4.8
+install:
+        - npm install -g vuepress
+script:
+        - npm run blog:build
+cache:
+        directories:
+                - "node_modules"
+notifications:
+        email: false
+deploy:
+        provider: pages
+        skin-cleanup: true
+        local_dir: public
+        github-token: $GITHUB_TOKEN
+        repo: ORcxzjeeeee/ORcxzjeeeee.github.io
+        keep-history: true
+        target-branch: gh-pages
+        on:
+                branch: gh-pages
