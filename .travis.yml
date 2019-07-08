@@ -5,6 +5,7 @@ env:
         - CXX=g++-4.8
 install:
         - npm install -g vuepress
+        - npm install
 script:
         - npm run blog:build
 cache:
