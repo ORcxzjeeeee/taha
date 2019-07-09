@@ -36,7 +36,7 @@ let blogPosts = generateSidebar(blogPaths, true, 5);
 module.exports = {
     title: 'taha-',
     dest: 'public',
-    base: '/',
+    base: '/taha/',
     plugins: [
       '@vuepress/blog',
       '@vuepress/pwa'
