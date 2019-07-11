@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "H0me"
 blog_index: true
 ---
 
