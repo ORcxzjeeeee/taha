@@ -1,6 +1,6 @@
 <template>
 <div>
-  <table class = "blog-index-list">
+  <table class = "blog-index-list" v-bind:style="{direction: directionType}">
     <tbody>
       <tr v-for="post in posts">
         <td>{{ formateDate(post.frontmatter.date) }}</td>
@@ -15,9 +15,10 @@
 import moment from "moment"
 
 export default {
-  props: [
-    'limit',
-  ],
+  props: {
+    limit: 0,
+    directionType: 'ltr'
+  },
   methods: {
     formateDate(date, format = 'YYYY-MM-DD') {
       return moment(date).format(format)
@@ -33,6 +34,11 @@ export default {
       if (this.limit > 0) {
         posts = posts.slice(0, this.limit);
       }
+      
+      if(this.$route.path.includes('/blog/fa')) {
+        this.directionType = 'rtl'
+        console.log(this.directionType)
+      }
 
       return posts;
     }
@@ -41,7 +47,10 @@ export default {
 </script>
 
 <style scoped>
+@import "../../node_modules/vazir-font/dist/font-face.css";
+
 .blog-index-list {
+  font-family: Vazir;
   display: table;
   width: 100%;
   table-layout: auto;
