@@ -8,6 +8,4 @@ blog_index: false
 
 <h2>داستان مهاجرت من از Kubuntu به openSUSE</h2>
 
-سلام
-
 </div>
